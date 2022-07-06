@@ -8,5 +8,5 @@ git clone
 npm install
 npm start
 ## Ссылки
- ### 51.250.91.197
- ### api.mov.nomoredomains.xyz
+  IP: 51.250.92.38
+ Домен: api.mov.nomoredomains.xyz
