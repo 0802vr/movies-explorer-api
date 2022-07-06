@@ -44,7 +44,7 @@ const createMovie = (req, res, next) => {
     .then((movie) => {
       res.send({ movie });
     })
-    // eslint-disable-next-line consistent-return
+
     .catch((err) => {
       if (err.name === 'ValidationError') {
         return next(new Error400('Переданы некорретные данные'));
