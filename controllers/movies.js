@@ -47,10 +47,11 @@ const createMovie = (req, res, next) => {
 
     .catch((err) => {
       if (err.name === 'ValidationError') {
-        return next(new Error400('Переданы некорретные данные'));
+        throw new Error400('Переданы некорретные данные');
       }
-      next(err);
-    });
+      return next(err);
+    })
+    .catch(next);
 };
 const deleteMovie = (req, res, next) => {
   const { movieId } = req.params;
